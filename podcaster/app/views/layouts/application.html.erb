@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <% if notice %>
@@ -16,6 +17,13 @@
   </head>
 
   <body>
+
+    <ul>
+      <li><a class="ion-ionic"></a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="ion-ios-person-outline"></a></li>
+    </ul>
     <%= yield %>
   </body>
 </html>
