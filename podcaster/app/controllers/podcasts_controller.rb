@@ -1,12 +1,11 @@
-class PodcastController < ApplicationController
+class PodcastsController < ApplicationController
   def index
     @user = current_user
     @podcasts = @user.podcasts
   end
 
   def show
-    @user = User.find(params[:id] || current_user.id)
-    @podcasts = @user.podcasts
+    @podcast = Podcast.find(params[:id])
   end
 
   def create
