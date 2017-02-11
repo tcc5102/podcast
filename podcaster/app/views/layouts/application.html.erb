@@ -18,12 +18,21 @@
 
   <body>
 
-    <ul>
-      <li><a class="ion-ionic"></a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a class="ion-ios-person-outline"></a></li>
-    </ul>
+    <nav>
+      <li class="ion-ionic"></li>
+      <li><a href="today">Today</a></li>
+      <li><a href="schedule">Schedule</a></li>
+      <div class="profile">
+        <% if user_signed_in? %>
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> |
+          <%= link_to "Login", new_user_session_path %>
+        <% end %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

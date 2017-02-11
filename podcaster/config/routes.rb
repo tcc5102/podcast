@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'user/show'
+  get 'podcast/show'
 
   devise_for :users
 
@@ -15,8 +15,8 @@ Rails.application.routes.draw do
     end
   end
 
-  # resources :users, only: [:show] do
-  #   resources :items, only: [:create, :destroy]
-  # end
+  resources :users, only: [] do
+    resources :podcasts
+  end
 
 end
