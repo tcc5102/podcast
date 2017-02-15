@@ -1,10 +1,10 @@
-<%= form_for [ user, user.podcasts.new ], remote: true do |f| %>
+<%= form_for [ user, Podcast.new ], remote: true do |f| %>
   <div class='field add'>
-    <%= f.label :Add %>
+    <%= f.label "Podcast" %>
     <%= f.text_field :title, class: 'field', placeholder: 'Add a new podcast.' %>
   </div>
   <div class='field rate'>
-    <%= f.label :link %>(1-5)
+    <%= f.label "Link (1-5)" %>
     <%= f.text_field :link, class: 'field', placeholder: 'Link' %>
   </div>
   <div class="actions">

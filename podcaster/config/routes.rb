@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      get "podcasts/index" => "podcasts#index"
+      get "podcasts" => "podcasts#index"
       # go to user show page upon sign in
       root 'users#show', as: :authenticated_root
     end

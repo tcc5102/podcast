@@ -2,6 +2,7 @@ class PodcastsController < ApplicationController
   def index
     @user = current_user
     @podcasts = @user.podcasts
+    p @podcasts
   end
 
   def show
