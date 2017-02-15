@@ -46,6 +46,12 @@ li a {
 }
 
 li a:hover {
+  color: #42bcf4;
+}
+
+li i:hover {
+  color: #42bcf4;
+
 }
 
 .profile {
@@ -58,8 +64,12 @@ li a:hover {
   text-decoration: none;
 }
 
-.ion-ionic {
+.profile a:hover {
   color: #42bcf4;
+}
+
+.ion-ionic {
+  color: white;
   padding-left: 5px;
   padding-top: 1px;
 }
