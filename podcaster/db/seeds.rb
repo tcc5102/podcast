@@ -8,6 +8,8 @@
 
 require 'faker'
 
+days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
 5.times do
   user = User.create!(
     email: Faker::Internet.email,
@@ -27,9 +29,10 @@ puts "#{User.count} users created"
 
 5.times do
   podcast = Podcast.create!(
-    title: Faker::Lorem.sentence,
+    title: Faker::Book.title,
     link:  Faker::Internet.url,
-    user: tyler
+    user: tyler,
+    days: days.sample
   )
   podcast.save!
 end

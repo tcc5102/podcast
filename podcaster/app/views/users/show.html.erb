@@ -1,1 +1,16 @@
 <h1>Podcasts for <%= Time.now.strftime("%A") %></h1>
+<div align="left">
+<% @podcasts.each do |podcast| %>
+  <% if podcast.days === Time.now.strftime("%A") %>
+    <%= link_to podcast.title, podcast.link %>
+
+    <button type="button" class="btn btn-default">
+      <%= link_to "Update", edit_user_podcast_path(@user, podcast) %>
+    </button>
+    <button type="button" class="btn btn-default">
+      <%= link_to "Delete", user_podcast_path(@user.id, podcast), method: :delete, remote: true %>
+    </button>
+
+  <% end %>
+<% end %>
+</div>

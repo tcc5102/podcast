@@ -45,7 +45,7 @@ class PodcastsController < ApplicationController
 
   def schedule
     @user = current_user
-    @podcasts = @user.podcasts
+    @podcasts = @user.podcasts.sort_by{ |podcast| podcast.days }
   end
 
   def podcast_params
