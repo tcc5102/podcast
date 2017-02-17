@@ -1,6 +1,8 @@
 <h1 align="center">Edit Podcast</h1>
 
 <%= form_for [current_user, @podcast] do |f| %>
+  <%= f.label "Episode" %>
+  <%= f.number_field :episode, :style => 'width:40px' %>
   <%= f.label "Name" %>
   <%= f.text_field :title, class: 'field', placeholder: 'Add a new podcast' %>
   <%= f.label "Link" %>

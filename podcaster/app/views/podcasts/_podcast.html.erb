@@ -1,11 +1,11 @@
 <div align="left">
   <% @podcasts.each do |podcast| %>
-    <p><%= link_to podcast.title, podcast.link %>  [<%= podcast.days %>]
+    <p><%= link_to podcast.title, podcast.link %> <%= podcast.episode %>
       <button type="button" class="btn btn-default">
         <%= link_to "Update", edit_user_podcast_path(user, podcast) %>
       </button>
       <button type="button" class="btn btn-default">
-        <%= link_to "Delete", user_podcast_path(user.id, podcast), method: :delete, remote: true %>
+        <%= link_to "X", user_podcast_path(user.id, podcast), method: :delete, remote: true %>
       </button>
     </p>
   <% end %>

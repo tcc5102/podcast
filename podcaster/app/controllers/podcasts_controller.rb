@@ -10,7 +10,7 @@ class PodcastsController < ApplicationController
 
   def create
     @user = current_user
-    @podcast = Podcast.new(params.require(:podcast).permit(:title, :link))
+    @podcast = Podcast.new(params.require(:podcast).permit(:title, :link, :days, :episode))
     @podcast.user_id = @user.id
 
     if @podcast.save
@@ -36,7 +36,7 @@ class PodcastsController < ApplicationController
     @podcast.assign_attributes(podcast_params)
     if @podcast.save
       flash[:notice] = "Podcast was updated."
-      redirect_to podcast_show_path
+      redirect_to :back
     else
       flash.now[:alert] = "There was an error updating the podcast. Please try again."
       redirect_to :back
@@ -45,10 +45,10 @@ class PodcastsController < ApplicationController
 
   def schedule
     @user = current_user
-    @podcasts = @user.podcasts.sort_by{ |podcast| podcast.days }
+    @podcasts = @user.podcasts
   end
 
   def podcast_params
-    params.require(:podcast).permit(:title, :link)
+    params.require(:podcast).permit(:title, :link, :days, :episode)
   end
 end

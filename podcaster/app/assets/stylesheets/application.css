@@ -33,6 +33,10 @@ nav {
       max-height: 88px;
 }
 
+a:hover {
+  color: #42bcf4;
+}
+
 li {
     float: left;
 }
@@ -75,5 +79,5 @@ li i:hover {
 }
 
 .form {
-  
+
 }

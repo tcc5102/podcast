@@ -32,7 +32,8 @@ puts "#{User.count} users created"
     title: Faker::Book.title,
     link:  Faker::Internet.url,
     user: tyler,
-    days: days.sample
+    days: days.sample,
+    episode: Faker::Number.between(1, 100)
   )
   podcast.save!
 end
