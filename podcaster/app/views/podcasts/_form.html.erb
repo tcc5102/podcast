@@ -6,7 +6,9 @@
       <%= f.label "Link" %>
       <%= f.text_field :link, class: 'field', placeholder: 'Link to it' %>
       <%= f.label "Day" %>
-      <%= f.text_field :days, class: 'field', placeholder: 'When to listen?' %>
+      <%= f.text_field :days, class: 'field', placeholder: 'e.g. Monday' %>
+      <%= f.label "Last Episode Title" %>
+      <%= f.text_field :last_title, class: 'field', placeholder: 'Title' %>
       <%= f.label "Episode" %>
       <%= f.number_field :episode, :style => 'width:40px' %>
       <%= f.submit 'Save', class: 'btn btn-success' %>

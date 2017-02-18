@@ -19,11 +19,13 @@
   <body>
 
     <nav>
-      <li><%= link_to authenticated_root_path do %>
-        <i class="ion-ionic"></i>
-        <% end %>
-      </li>
-      <li><%= link_to "Schedule", podcasts_schedule_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to authenticated_root_path do %>
+          <i class="ion-ionic"></i>
+          <% end %>
+        </li>
+        <li><%= link_to "Schedule", podcasts_schedule_path %></li>
+      <% end %>
       <div class="profile">
         <% if user_signed_in? %>
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |

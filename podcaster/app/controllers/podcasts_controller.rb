@@ -10,7 +10,7 @@ class PodcastsController < ApplicationController
 
   def create
     @user = current_user
-    @podcast = Podcast.new(params.require(:podcast).permit(:title, :link, :days, :episode))
+    @podcast = Podcast.new(params.require(:podcast).permit(:title, :link, :days, :episode, :last_title))
     @podcast.user_id = @user.id
 
     if @podcast.save
@@ -49,6 +49,6 @@ class PodcastsController < ApplicationController
   end
 
   def podcast_params
-    params.require(:podcast).permit(:title, :link, :days, :episode)
+    params.require(:podcast).permit(:title, :link, :days, :episode, :last_title)
   end
 end

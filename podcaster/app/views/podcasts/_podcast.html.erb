@@ -1,6 +1,6 @@
 <div align="left">
   <% @podcasts.each do |podcast| %>
-    <p><%= link_to podcast.title, podcast.link %> <%= podcast.episode %>
+    <p><%= link_to podcast.title, podcast.link %> Episode: <%= podcast.episode %> <%= podcast.last_title %>
       <button type="button" class="btn btn-default">
         <%= link_to "Update", edit_user_podcast_path(user, podcast) %>
       </button>

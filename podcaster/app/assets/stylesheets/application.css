@@ -19,18 +19,17 @@
 
 body {
   text-align: center;
-  background-color: #ffffff;
 }
 
 nav {
   list-style-type: none;
-      margin: 0;
-      padding: 10px 5px 10px 5px;
-      overflow: hidden;
-      background-color: #e07121;
-      border-top: thick solid #42bcf4;
-      border-bottom: thick solid #42bcf4;
-      max-height: 88px;
+  margin: 0;
+  padding: 10px 5px 10px 5px;
+  overflow: hidden;
+  background-color: #e07121;
+  border-top: thick solid #42bcf4;
+  border-bottom: thick solid #42bcf4;
+  max-height: 88px;
 }
 
 a:hover {
@@ -66,6 +65,7 @@ li i:hover {
 .profile a {
   color: white;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 .profile a:hover {
@@ -76,6 +76,10 @@ li i:hover {
   color: white;
   padding-left: 5px;
   padding-top: 1px;
+}
+
+.ion-ionic:hover {
+  color: #42bcf4;
 }
 
 .form {
