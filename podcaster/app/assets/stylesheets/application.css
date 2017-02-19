@@ -17,8 +17,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
 body {
+  margin: 0px;
   text-align: center;
+  background-image: url("signup.jpg");
+  background-color: #0a2756;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 nav {
@@ -26,10 +37,23 @@ nav {
   margin: 0;
   padding: 10px 5px 10px 5px;
   overflow: hidden;
-  background-color: #e07121;
-  border-top: thick solid #42bcf4;
-  border-bottom: thick solid #42bcf4;
+  background-color: #0a2756;
+  border-top: thick solid #ffffff;
+  border-bottom: thick solid #ffffff;
   max-height: 88px;
+}
+
+nav p {
+  display: inline;
+  background-color: white;
+  color: #42bcf4;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+}
+
+a {
+  color: #ffffff;
+  padding: 5px 5px 5px 5px;
 }
 
 a:hover {
@@ -44,7 +68,7 @@ li a {
     display: inline;
     color: white;
     text-align: left;
-    padding: 14px 16px;
+    padding: 5px 5px 5px 5px;
     text-decoration: none;
 }
 
@@ -60,6 +84,7 @@ li i:hover {
 .profile {
   float: right;
   clear: right;
+  padding-right: 25px;
 }
 
 .profile a {
@@ -74,8 +99,12 @@ li i:hover {
 
 .ion-ionic {
   color: white;
-  padding-left: 5px;
-  padding-top: 1px;
+  padding-left: 25px;
+}
+
+.ion-close-circled {
+  max-width: 15px;
+  max-height: 10px;
 }
 
 .ion-ionic:hover {
@@ -83,5 +112,37 @@ li i:hover {
 }
 
 .form {
+  padding-left: 25px;
+  border: 1px white solid;
+  max-width: 1150px;
+}
 
+.headline {
+}
+
+h1 {
+  padding-left: 25px;
+}
+
+h3 {
+  float: both;
+  clear: both;
+}
+
+p {
+  padding-left: 25px;
+}
+
+.episode {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.render {
+  padding-left: 20px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #ffffff;
 }

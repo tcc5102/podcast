@@ -27,7 +27,7 @@ tyler.save!
 users = User.all
 puts "#{User.count} users created"
 
-5.times do
+50.times do
   podcast = Podcast.create!(
     title: Faker::Book.title,
     link:  Faker::Internet.url,

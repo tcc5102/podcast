@@ -21,22 +21,29 @@
     <nav>
       <% if user_signed_in? %>
         <li><%= link_to authenticated_root_path do %>
-          <i class="ion-ionic"></i>
+          <i class="ion-ionic"> PODCASTER</i>
           <% end %>
         </li>
         <li><%= link_to "Schedule", podcasts_schedule_path %></li>
       <% end %>
       <div class="profile">
         <% if user_signed_in? %>
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> 
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         <% else %>
-          <%= link_to "Sign up", new_user_registration_path %> |
+          <%= link_to "Sign up", new_user_registration_path %>
           <%= link_to "Login", new_user_session_path %>
         <% end %>
       </div>
     </nav>
+    <div>
+
+    <% if !current_user %>
+      <h3>Can't keep up with all the bookmarks and remembering episodes?</h3>
+      <p class="headline">Step Up to Easier Podcast and Stream Management</p>
+    <% end %>
 
     <%= yield %>
+
   </body>
 </html>

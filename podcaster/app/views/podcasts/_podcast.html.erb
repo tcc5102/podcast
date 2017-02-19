@@ -1,13 +1,18 @@
-<div align="left">
+<div align="left" class="render">
   <% @podcasts.each do |podcast| %>
-    <p><%= link_to podcast.title, podcast.link %> Episode: <%= podcast.episode %> <%= podcast.last_title %>
-      <button type="button" class="btn btn-default">
-        <%= link_to "Update", edit_user_podcast_path(user, podcast) %>
-      </button>
-      <button type="button" class="btn btn-default">
-        <%= link_to "X", user_podcast_path(user.id, podcast), method: :delete, remote: true %>
-      </button>
-    </p>
+    <%= link_to podcast.title, podcast.link %>
+    <i><%= link_to edit_user_podcast_path(@user, podcast) do %>
+      <i class="ion-ios-gear"></i>
+    <% end %>
+    </i>
+    <i><%= link_to user_podcast_path(@user.id, podcast), method: :delete, remote: true do %>
+      <i class="ion-trash-a"></i>
+    <% end %>
+    </i>
+    <div class="episode">
+      Episode: <%= podcast.episode %> <%= podcast.last_title %>
+    </div>
+    </br>
   <% end %>
 </div>
 <!-- if podcast.day = "monday" blah blah etc -->
