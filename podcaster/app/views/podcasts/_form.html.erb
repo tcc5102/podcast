@@ -1,18 +1,18 @@
 <div class="form" align="left">
   <%= form_for [ user, Podcast.new ], remote: true do |f| %>
     <div class='field add'>
-      <%= f.label "New Podcast Name" %>
-      <%= f.text_field :title, class: 'field', placeholder: 'Add a new podcast' %>
-      <%= f.label "Link" %>
-      <%= f.text_field :link, class: 'field', placeholder: 'Link to it' %>
-      <%= f.label "Day" %>
-      <%= f.text_field :days, class: 'field', placeholder: 'e.g. Monday' %>
-      <%= "Optional :"%>
-      <%= f.label "Current Episode Title" %>
-      <%= f.text_field :last_title, class: 'field', placeholder: 'Title' %>
-      <%= f.label "Current Episode #" %>
-      <%= f.number_field :episode, :style => 'width:40px' %>
-      <%= f.submit 'Save', class: 'btn btn-success' %>
+      <%= f.label "New Podcast Name" %></br>
+      <%= f.text_field :title, class: 'field', placeholder: 'Add a new podcast' %></br>
+      <%= f.label "Link" %></br>
+      <%= f.text_field :link, class: 'field', placeholder: 'Link to it' %></br>
+      <%= f.label "Day" %></br>
+      <%= f.text_field :days, class: 'field', placeholder: 'e.g. Monday' %></br></br>
+      <%= "Optional"%></br></br>
+      <%= f.label "Current Episode Title" %></br>
+      <%= f.text_field :last_title, class: 'field', placeholder: 'Title' %></br>
+      <%= f.label "Current Episode #" %></br>
+      <%= f.number_field :episode, :style => 'width:40px', placeholder: 10 %>
+      <%= f.submit 'Save', class: 'btn btn-success' %></br>
     </div>
   <% end %>
 </div>
