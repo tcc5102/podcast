@@ -36960,3 +36960,101 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 48ms (Views: 40.5ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for ::1 at 2017-04-23 19:39:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPodcast Load (1.1ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 5746ms (Views: 5711.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-23 19:39:36 -0400
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 56ms (Views: 49.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts/schedule" for ::1 at 2017-04-23 19:39:39 -0400
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by PodcastsController#schedule as HTML
+  Rendering podcasts/schedule.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (425.9ms)
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ? ORDER BY "podcasts"."updated_at" DESC[0m  [["user_id", 6]]
+  Rendered podcasts/_podcast.html.erb (11.3ms)
+  Rendered podcasts/schedule.html.erb within layouts/application (440.3ms)
+Completed 200 OK in 496ms (Views: 478.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts/schedule" for ::1 at 2017-04-23 19:40:15 -0400
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by PodcastsController#schedule as HTML
+  Rendering podcasts/schedule.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (2.3ms)
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ? ORDER BY "podcasts"."updated_at" DESC[0m  [["user_id", 6]]
+  Rendered podcasts/_podcast.html.erb (9.5ms)
+  Rendered podcasts/schedule.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/podcasts/schedule" for ::1 at 2017-04-23 19:41:48 -0400
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by PodcastsController#schedule as HTML
+  Rendering podcasts/schedule.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (2.3ms)
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ? ORDER BY "podcasts"."updated_at" DESC[0m  [["user_id", 6]]
+  Rendered podcasts/_podcast.html.erb (10.4ms)
+  Rendered podcasts/schedule.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 1469ms (Views: 1466.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/podcasts/schedule" for ::1 at 2017-04-23 19:42:46 -0400
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by PodcastsController#schedule as HTML
+  Rendering podcasts/schedule.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (2.9ms)
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ? ORDER BY "podcasts"."updated_at" DESC[0m  [["user_id", 6]]
+  Rendered podcasts/_podcast.html.erb (11.1ms)
+  Rendered podcasts/schedule.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 1587ms (Views: 1584.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts/schedule" for ::1 at 2017-04-23 19:43:23 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by PodcastsController#schedule as HTML
+  Rendering podcasts/schedule.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (2.5ms)
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ? ORDER BY "podcasts"."updated_at" DESC[0m  [["user_id", 6]]
+  Rendered podcasts/_podcast.html.erb (11.1ms)
+  Rendered podcasts/schedule.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 1589ms (Views: 1586.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/podcasts/schedule" for ::1 at 2017-04-23 19:43:41 -0400
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by PodcastsController#schedule as HTML
+  Rendering podcasts/schedule.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (2.8ms)
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ? ORDER BY "podcasts"."updated_at" DESC[0m  [["user_id", 6]]
+  Rendered podcasts/_podcast.html.erb (9.3ms)
+  Rendered podcasts/schedule.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/podcasts/schedule" for ::1 at 2017-04-23 19:44:30 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Processing by PodcastsController#schedule as HTML
+  Rendering podcasts/schedule.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (2.3ms)
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = ? ORDER BY "podcasts"."updated_at" DESC[0m  [["user_id", 6]]
+  Rendered podcasts/_podcast.html.erb (9.9ms)
+  Rendered podcasts/schedule.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 1392ms (Views: 1389.7ms | ActiveRecord: 0.3ms)
+
+

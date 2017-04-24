@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'pg'
+# gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
@@ -37,10 +37,10 @@ gem 'devise'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+# group :production do
+#   gem 'pg'
+#   gem 'rails_12factor'
+# end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
